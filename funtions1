@@ -1,0 +1,42 @@
+
+import random
+from random import Random
+import random
+
+def stringfunction (strlen):
+    alphabetstring = "abcdefghijklmnopqrstuvwxyz "
+    res = ""
+    for i in range(strlen):
+        res = res + alphabetstring[random.randrange(27)]
+
+    return res
+
+
+
+def comparefunction (goal, teststring):
+    numsame = 0
+    for i in range(len(goal)):
+        if goal[i] == teststring[i]:
+            numsame = numsame + 1
+
+    return numsame/len(goal)
+
+print(comparefunction("methinks it is like a weasel",stringfunction(28)))
+
+def main():
+    goalstring = "methinks it is like a weasel"
+    newstring = stringfunction(28)
+    newscore = comparefunction(goalstring,stringfunction(28))
+    best=0
+    while newscore < 1:
+        if newscore>best:
+            print(newscore , newstring)
+            best=newscore
+
+        newstring=stringfunction(28)
+        newscore = comparefunction(goalstring,newstring)
+
+main()
+
+
+
