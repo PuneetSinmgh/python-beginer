@@ -62,6 +62,22 @@ print(list(range(1,10,3)))
 
 
 #tuples  : ordered  sequence of immutable objects , can be accessed by index liek array , tuple[], it s imutable this can't be changed 
+# can be nested, supports slicing, can be deleted by del(), index(), count(), etc.
+mylist = [1,2,3,4,5]
+mytuple = tuple(mylist) 
+print(mytuple)
+print(type(mytuple))
+print(mytuple[1])
+print(mytuple[1:3])
+print(mytuple[1:])  # Slicing from index 1 to end
+print(mytuple[:3])  # Slicing from start to index 3
+print(mytuple[-1])  # Accessing last element
+print(mytuple[-2:])  # Slicing from second last element to end
+print(mytuple.count(2))  # Count occurrences of 2
+print(mytuple.index(3))  # Find index of first occurrence of 3
+
+# Strings : ordered sequence of characters, immutable, can be accessed by index like array, supports slicing, can be nested, can be deleted by del(), split(), join(), replace(), etc.
+
 
 str="david"
 #str[2]= "f"
