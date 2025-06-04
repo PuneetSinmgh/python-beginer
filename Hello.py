@@ -1,14 +1,35 @@
+from collections import *
+ 
+
 # File : Hello.py
 
-print "Hello World!"
+print("Hello World!")
+
 print(7 <= 3)
+
 print(7.5 > 3)
 
 List = [1,2,3,"car"]
+
 a = [List]*3
-print a
+print(a)
+
 for item in List:
-    print item
+    print(item)
+
+f =1.01
+print(int(f))
+print(float(3))
+print(str(3.5))
+
+print(bool(0))
+print(bool(1))
+print(int(True))
+print(int(False))
+
+print(float(True))
+print(float(False))
+
 
 counter=0
 while counter<4:
