@@ -39,4 +39,30 @@ def main():
 main()
 
 
+# sorting a list b 
+unSorted = [1,5,3,6,7,3,5,2,8,95,7,7,98]
+print( sorted (unSorted))
+
+unSorted = [1,5,3,6,7,3,5,2,8,95,7,7,98]
+unSorted.sort()
+print( unSorted)
+
+# run a function to count the number of words in a string
+string = "Mary had a little lamb Little lamb, little lamb Mary had a little lamb.Its fleece was white as snow And everywhere that Mary went Mary went, Mary went Everywhere that Mary went The lamb was sure to go"
+def numOfWords( string ):
+    count=0
+    for s in string.split():
+        count+=1
+    return count
+print(numOfWords(string))
+
+# count the number of words in a string and return a dictionary with the word as key and its count as value
+def countOfEachWords( string ):
+    dictionary = {}
+    words = string.split()
+    print(words)
+    for s in words:
+        dictionary[s] = dictionary.get(s,0)+1 
+    return dictionary
+print(countOfEachWords(string))
 
