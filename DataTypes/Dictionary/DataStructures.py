@@ -163,3 +163,71 @@ set7 = myset.copy()
 print(set7)  # Copy of the set
 set8 = frozenset(myset)  # Immutable set
 print(set8)  # Frozen set (immutable)
+
+
+#iteration of dictionaries
+for key, value in firstdictionary.items():
+    print(f"Key: {key}, Value: {value}")
+# Iterating through a dictionary
+for key in firstdictionary:
+    print(f"Key: {key}, Value: {firstdictionary[key]}")
+
+for key in firstdictionary.keys():
+    print(f"Key: {key}, Value: {firstdictionary[key]}")
+
+print( release_year_dict.keys())
+
+#sorting a dictionary by keys
+
+sorted_dict = dict(sorted(release_year_dict.items()))
+print("Sorted dictionary by keys:", sorted_dict)
+
+# Sorting a dictionary by values
+sorted_dict_by_values = dict(sorted(release_year_dict.items(), key=lambda item: item[1]))
+print("Sorted dictionary by values:", sorted_dict_by_values)
+
+#sorting and comprehension
+release_year_dict = {"Thriller": "1982", "Back in Black": "1980", \
+                    "The Dark Side of the Moon": "1973", "The Bodyguard": "1992", \
+                    "Bat Out of Hell": "1977", "Their Greatest Hits (1971-1975)": "1976", \
+                    "Saturday Night Fever": "1977", "Rumours": "1977"}
+release_year_dict = {k: int(v) for k, v in release_year_dict.items()}
+# Sorting the dictionary by values using a lambda function
+print( { k:v for k,v in sorted( release_year_dict.items() , key= lambda item : item[1]) } )
+
+#reducting list value list to mean
+tmp = {'japan':[2,3,4,5,6] , 'korea':[6,8,9,6,4]}
+temp_mean = { k: sum(v)/len(v) for k,v in tmp.items() }
+print(temp_mean)
+
+
+#countiong elements in a list using Counter
+from collections import Counter
+mylist = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+counter = Counter(mylist)
+print(counter)  # Output: Counter({'apple': 3, 'banana': 2, 'orange': 1})
+
+# Counting elements in a list using defaultdict
+from collections import defaultdict
+default_dict_counter = defaultdict(int)
+for item in mylist:
+    default_dict_counter[item] += 1
+print(default_dict_counter)  # Output: defaultdict(<class 'int'>, {'apple': 3, 'banana': 2, 'orange': 1})
+
+# Counting elements in a list using a regular dictionary
+regular_dict_counter = {}
+for item in mylist:
+    if item in regular_dict_counter:
+        regular_dict_counter[item] += 1
+    else:
+        regular_dict_counter[item] = 1
+print(regular_dict_counter)  # Output: {'apple': 3, 'banana': 2, 'orange': 1}
+
+# Counting elements in a list using a simple loop
+simple_counter = {}
+for item in mylist:
+    if item in simple_counter:
+        simple_counter[item] += 1
+    else:
+        simple_counter[item] = 1
+print(simple_counter)  # Output: {'apple': 3, 'banana': 2, 'orange': 1}
