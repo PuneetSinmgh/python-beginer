@@ -19,8 +19,6 @@ def vector_addition(u, v):
 #vector addition without numpy
 print( [u[i] + v[i] for i in range(len(u))])
 
-#multi-dimentional vector addition
-
 # Vector subtraction
 def vector_subtraction(u, v):
     return np.array(u) - np.array(v)

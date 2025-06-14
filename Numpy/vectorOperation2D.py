@@ -37,11 +37,11 @@ print( A-B)
 print( np.subtract(A, B) )  # Element-wise subtraction using numpy's subtract function
 
 # 2d Vector multiplication
-print("multiply", A*B) # dot product of 1 row and 1 column of two matrix
+print("multiply", A*B) # Element-wise multiplication: # Multiplying corresponding elements of two 2D arrays. the shape of two vexctors must be same.
 print( "multiply : ",np.multiply(A, B) )  # Element-wise multiplication using numpy's multiply function
 
 #dot product of 2d vectors
-print("dot product", np.dot(A, B))  # Dot product of two 2D arrays
+print("dot product", np.dot(A, B))  # Dot product of two 2D arrays , dot product of 1 row and 1 column of two matrix
 # Element-wise division
 print("divide", A/B)
 print("divide : ", np.divide(A, B))  # Element-wise division using numpy's divide function
